@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: pixelToRem(15);
+  line-height: pixelToRem(25);
+}
+
+h1, .header-large {
+  font-weight: bold;
+  font-size: pixelToRem(32);
+  line-height: pixelToRem(40);
+  letter-spacing: pixelToRem(3.33);
+
+  @media (min-width: 768px) {
+    font-size: pixelToRem(40);
+    line-height: pixelToRem(48);
+    letter-spacing: pixelToRem(4.17);
+  }
+}
+
+h2 {
+  font-weight: bold;
+  font-size: pixelToRem(24);
+  line-height: pixelToRem(25);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: pixelToRem(18);
+  line-height: pixelToRem(25);
+}
+
+h4, button, .button {
+  font-weight: bold;
+  font-size: pixelToRem(12);
+  line-height: pixelToRem(16);
+  letter-spacing: pixelToRem(2);
+}
+
+.nav-item, .card_read, .comparisons {
+  font-weight: bold;
+  font-size: pixelToRem(12);
+  letter-spacing: pixelToRem(2);
+}
+
+.author_date {
+  font-size: pixelToRem(13);
+}
