@@ -1,0 +1,52 @@
+.button {
+  border: none;
+  background: none;
+  padding: 1rem 3rem;
+  transition-duration: 200ms;
+  cursor: pointer;
+  
+  &_white {
+    color: $black;
+    padding: 0;
+
+    &_border {
+      color: $black;
+      background-color: $white;
+    }
+  }
+  
+  &_black {
+    color: $white;
+    padding: 0;
+
+    &_border {
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  &_white, &_black {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  &_white_border, &_black_border {
+    &:hover {
+      color: $black;
+      background-color: $grey;
+    }
+  }
+
+  &_black, &_white_border {
+    &:active {
+      filter: brightness(0.3);
+    }
+  }
+
+  &_white, &_black_border {
+    &:active {
+      filter: brightness(1.7);
+    }
+  }
+}
