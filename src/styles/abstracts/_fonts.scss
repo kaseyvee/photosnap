@@ -3,7 +3,7 @@
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: pixelToRem(15);
-  line-height: pixelToRem(25);
+  // line-height: pixelToRem(25);
 }
 
 h1, .header-large {
@@ -38,10 +38,21 @@ h4, .button {
   letter-spacing: pixelToRem(2);
 }
 
-.nav-item, .card_read, .comparisons {
+.footer-item, .card_read, .comparisons {
   font-weight: bold;
   font-size: pixelToRem(12);
   letter-spacing: pixelToRem(2);
+}
+
+.nav-item {
+  font-weight: bold;
+  font-size: pixelToRem(15);
+  letter-spacing: pixelToRem(2.5);
+  
+  @media (min-width: 768px) {
+    font-size: pixelToRem(12);
+    letter-spacing: pixelToRem(2);
+  }
 }
 
 .author_date {

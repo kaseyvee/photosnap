@@ -1,9 +1,10 @@
 .button {
   border: none;
   background: none;
-  padding: 1rem 3rem;
+  padding: 0.75rem 2rem;
   transition-duration: 200ms;
   cursor: pointer;
+  white-space: nowrap;
   
   &_white {
     color: $black;
