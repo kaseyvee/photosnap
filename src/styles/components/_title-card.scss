@@ -1,0 +1,22 @@
+.title-card {
+  picture {
+    img {
+      width: 100%;
+    }
+  }
+
+  &_main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4.5rem 2rem;
+
+    p {
+      opacity: 0.6;
+    }
+
+    .button {
+      width: fit-content;
+    }
+  }
+}

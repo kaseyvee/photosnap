@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
+import Button from "./Button";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -30,7 +31,12 @@ function Nav() {
         <a href="/pricing">PRICING</a>
       </li>
     </ul>
-    <button className="button button_black_border">GET AN INVITE</button>
+    <Button
+      className="nav-button"
+      text="GET AN INVITE"
+      colour="black"
+      border={true}
+    />
   </>;
 
   return (

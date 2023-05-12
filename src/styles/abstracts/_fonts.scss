@@ -6,6 +6,10 @@ body {
   // line-height: pixelToRem(25);
 }
 
+h1, h2, h3, h4, p, span {
+  margin: 0;
+}
+
 h1, .header-large {
   font-weight: bold;
   font-size: pixelToRem(32);
@@ -44,7 +48,7 @@ h4, .button {
   letter-spacing: pixelToRem(2);
 }
 
-.nav-item {
+.nav-item, .nav-button {
   font-weight: bold;
   font-size: pixelToRem(15);
   letter-spacing: pixelToRem(2.5);

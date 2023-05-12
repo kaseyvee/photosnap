@@ -1,7 +1,9 @@
+import TitleCard from "../components/TitleCard";
+
 function Home() {
   return (
     <main className="home">
-      home
+      <TitleCard />
     </main>
   );
 }
