@@ -41,10 +41,10 @@
   }
 
   @media (min-width: 768px) {
-    
     .wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      padding: 4rem 2.5rem;
     }
     
     &_left {
@@ -75,6 +75,18 @@
         align-self: end;
       }
     }
-   
+  }
+
+  @media (min-width: 1100px) {
+    &_left {
+      grid-template-columns: 1fr 1fr;
+
+      &_links {
+        flex-direction: column;
+        margin: 0;
+        align-items: flex-start;
+        grid-row: span 3;
+      }
+    }
   }
 }

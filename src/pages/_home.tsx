@@ -31,7 +31,9 @@ function Home() {
         {featuredStories}
       </div>
       <div className="home_features">
-        {features}
+        <div className="wrapper">
+          {features}
+        </div>
       </div>
     </main>
   );
