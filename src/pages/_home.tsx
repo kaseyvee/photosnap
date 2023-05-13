@@ -1,3 +1,4 @@
+import FeatureCard from "../components/FeatureCard";
 import StoryCard from "../components/StoryCard";
 import TitleCard from "../components/TitleCard";
 import homeData from "../helpers/data/homeData";
@@ -6,6 +7,10 @@ function Home() {
   const featuredStories = homeData.stories.map(story => {
     return <StoryCard key={story.title} data={story} />
   });
+
+  const features = homeData.features.map(feature => {
+    return <FeatureCard key={feature.title} data={feature} />
+  })
 
   return (
     <main className="home">
@@ -24,6 +29,9 @@ function Home() {
       />
       <div className="home_stories">
         {featuredStories}
+      </div>
+      <div className="home_features">
+        {features}
       </div>
     </main>
   );

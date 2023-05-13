@@ -5,6 +5,10 @@
     display: grid;
   }
 
+  &_features {
+    padding-block: 3rem;
+  }
+
   @media (min-width: 500px) {
     &_stories {
       grid-template-columns: 1fr 1fr;

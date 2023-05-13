@@ -44,7 +44,7 @@ const homeData = {
       image: "architecturals.jpg"
     },
   ],
-  offers: [
+  features: [
     {
       title: "100% Responsive",
       description: "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.",
