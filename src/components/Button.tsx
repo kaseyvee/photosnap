@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
 
 interface ButtonProps {
+  story?: boolean;
   className?: string;
   text: string;
   colour: string;
@@ -10,10 +11,19 @@ interface ButtonProps {
 
 function Button(props: ButtonProps) {
   return (
-    <Link to="" className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
-      {props.text}
-      {!props.border && <Arrow stroke={props.colour}/>}
-    </Link>
+    <>
+      {props.story ?
+        <span className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
+          {props.text}
+          {!props.border && <Arrow stroke={props.colour}/>}
+        </span>
+      :
+        <Link to="" className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
+          {props.text}
+          {!props.border && <Arrow stroke={props.colour}/>}
+        </Link>
+      }
+    </>
   );
 }
 

@@ -23,14 +23,21 @@ function StoryCard({ data }: StoryCardProps) {
       </picture>
       <div className="story-card_main">
         <header>
-          <h2 className="story-title">{data.title}</h2>
+          <h2 className="story-title" id="story-title">{data.title}</h2>
           <p>by {data.author}</p>
         </header>
         <Button
           colour="white"
           text="READ STORY"
+          story={true}
         />
       </div>
+      <a
+        href=""
+        aria-labelledby="story-title"
+        className="story-card_link"
+      >
+      </a>
     </div>
   );
 }
