@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow.svg";
 
 interface ButtonProps {
@@ -9,10 +10,10 @@ interface ButtonProps {
 
 function Button(props: ButtonProps) {
   return (
-    <a href="" className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
+    <Link to="" className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
       {props.text}
       {!props.border && <Arrow stroke={props.colour}/>}
-    </a>
+    </Link>
   );
 }
 

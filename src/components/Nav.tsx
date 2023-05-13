@@ -7,6 +7,8 @@ import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
 import Button from "./Button";
 
+import pageLinks from "../helpers/links/pageLinks";
+
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
@@ -19,17 +21,17 @@ function Nav() {
     setNavOpen(false);
   });
 
+  const pagesList = pageLinks.map(page => {
+    return (
+      <li key={page + "nav"} className="nav-item">
+        <Link to={`/${page}`}>{page.toUpperCase()}</Link>
+      </li>
+    )
+  })
+
   const navItems = <>
     <ul>
-      <li className="nav-item">
-        <a href="/stories">STORIES</a>
-      </li>
-      <li className="nav-item">
-        <a href="/features">FEATURES</a>
-      </li>
-      <li className="nav-item">
-        <a href="/pricing">PRICING</a>
-      </li>
+      {pagesList}
     </ul>
     <Button
       className="nav-button"

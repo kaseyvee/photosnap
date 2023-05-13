@@ -6,6 +6,9 @@
   }
 
   &_features {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding-block: 3rem;
   }
 
@@ -13,11 +16,21 @@
     &_stories {
       grid-template-columns: 1fr 1fr;
     }
+
+    @media (min-width: 768px) {
+      &_features {
+        padding-block: 5.5rem;
+      }
+    }
   }
   
   @media (min-width: 1100px) {
     &_stories {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    &_features {
+      flex-direction: row;
     }
   }
 }
