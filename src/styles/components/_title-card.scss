@@ -1,22 +1,130 @@
 .title-card {
+  
   picture {
+    display: flex;
+    max-height: 650px;
+    
     img {
       width: 100%;
+      object-fit: cover;
     }
   }
 
   &_main {
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    gap: 1rem;
-    padding: 4.5rem 2rem;
+    padding-inline: 2rem;
+    
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-block: 4.5rem;
+      
+      p {
+        opacity: 0.6;
+      }
+  
+      .button {
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}
 
-    p {
-      opacity: 0.6;
+@media (min-width: 500px) {
+  .title-card {
+    display: grid;
+    
+    &_main {
+      &_content {
+        h1, p, .button, .header-large {
+          max-width: 24rem;
+        }
+      }
+    }
+  }
+
+  .left {
+    grid-template-columns: 35% 65%;
+
+    picture {
+      grid-column: 1;
     }
 
-    .button {
-      width: fit-content;
+    .title-card_main {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  .right {
+    grid-template-columns: 65% 35%;
+
+    picture {
+      grid-column: 2;
+    }
+
+    .title-card_main {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .left {
+    grid-template-columns: 57% 43%;
+  }
+
+  .right {
+    grid-template-columns: 43% 57%;
+  }
+}
+
+.accent {
+  .title-card_main_content {
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 40%;
+      height: 6px;
+      background: $accent;
+      z-index: 0;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .title-card_main {
+      padding-block: 4.5rem;
+      padding-inline: 0;
+
+      &::before {
+        width: 0;
+      }
+
+      &_content {
+        @include flexCenter;
+        position: relative;
+        $padding: 2rem;
+        padding-inline: $padding;
+        padding-block: 0;
+        width: calc(100% - $padding * 2);
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 6px;
+          height: 100%;
+          background: $accent;
+          z-index: 0;
+        }
+      }
     }
   }
 }

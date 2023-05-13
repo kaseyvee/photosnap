@@ -12,14 +12,14 @@ const homeData = {
       description: "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
       image: "beautiful-stories.jpg",
       buttonText: "VIEW THE STORIES",
-      cardColour: "black",
+      cardColour: "white",
     },
     {
       title: "DESIGNED FOR EVERYONE",
       description: "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. ",
       image: "designed-for-everyone.jpg",
-      buttonText: "GET AN INVITE",
-      cardColour: "black",
+      buttonText: "VIEW THE STORIES",
+      cardColour: "white",
     }
   ],
   stories: [

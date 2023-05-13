@@ -1,5 +1,5 @@
 .button {
-  @include flexCenter;
+  display: flex;
   gap: 1rem;
   padding-block: 1rem;
   transition-duration: 200ms;
@@ -10,6 +10,7 @@
     padding: 0;
 
     &_border {
+      justify-content: center;
       color: $black;
       background-color: $white;
     }
@@ -18,8 +19,9 @@
   &_black {
     color: $white;
     padding: 0;
-
+    
     &_border {
+      justify-content: center;
       color: $white;
       background-color: $black;
     }
