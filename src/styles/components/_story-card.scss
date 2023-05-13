@@ -1,6 +1,7 @@
 .story-card {
   color: $white;
   position: relative;
+  z-index: 1;
   
   picture {
     display: flex;
@@ -26,7 +27,8 @@
 
     .button {
       justify-content: space-between;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
+      padding: 0;
 
       &:hover {
         text-decoration: none;

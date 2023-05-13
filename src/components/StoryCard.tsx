@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 interface StoryCardProps {
   data: {
@@ -10,7 +11,11 @@ interface StoryCardProps {
 
 function StoryCard({ data }: StoryCardProps) {
   return (
-    <div className="story-card">
+    <motion.div
+      className="story-card"
+      whileHover={{ y: -20 }}
+      whileFocus={{ y: -20 }}
+    >
       <picture>
         <source
           media="(min-width: 768px)"
@@ -38,7 +43,7 @@ function StoryCard({ data }: StoryCardProps) {
         className="story-card_link"
       >
       </a>
-    </div>
+    </motion.div>
   );
 }
 
