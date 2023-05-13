@@ -10,7 +10,7 @@ function FeatureCard({ data } : FeatureCardProps) {
   return (
     <div className="feature-card">
       <div className="feature-card_image-container">
-        <img src={`/assets/features/desktop/${data.image}`} alt="" />
+        <img src={`/photosnap/assets/features/desktop/${data.image}`} alt="" />
       </div>
       <h2>{data.title}</h2>
       <p>{data.description}</p>

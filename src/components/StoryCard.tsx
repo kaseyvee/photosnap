@@ -19,10 +19,10 @@ function StoryCard({ data }: StoryCardProps) {
       <picture>
         <source
           media="(min-width: 768px)"
-          srcSet={`/assets/stories/desktop/${data.image}`}
+          srcSet={`/photosnap/assets/stories/desktop/${data.image}`}
         />
         <img
-          src={`/assets/stories/mobile/${data.image}`}
+          src={`/photosnap/assets/stories/mobile/${data.image}`}
           alt=""
         />
       </picture>

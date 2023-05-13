@@ -24,14 +24,14 @@ function TitleCard({ data, hero, imagePosition }: TitleCardProps) {
       <picture>
         <source
           media="(min-width: 1100px)"
-          srcSet={`/assets/home/desktop/${data.image}`}
+          srcSet={`/photosnap/assets/home/desktop/${data.image}`}
         />
         <source
           media="(min-width: 786px)"
-          srcSet={`/assets/home/tablet/${data.image}`}
+          srcSet={`/photosnap/assets/home/tablet/${data.image}`}
         />
         <img
-          src={`/assets/home/mobile/${data.image}`}
+          src={`/photosnap/assets/home/mobile/${data.image}`}
           alt=""
         />
       </picture>
