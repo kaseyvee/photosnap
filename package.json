@@ -1,6 +1,7 @@
 {
   "name": "photosnap",
-  "private": true,
+  "homepage": "https://kaseyvee.github.io/photosnap",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

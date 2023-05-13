@@ -5,7 +5,7 @@ import Router from "./pages/router";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/photosnap">
       <Nav />
       <Router />
       <Footer />
