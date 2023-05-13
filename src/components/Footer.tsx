@@ -16,7 +16,7 @@ function Footer() {
 
   const pagesList = pageLinks.map(page => {
     return (
-      <li key={page + "footer"}>
+      <li key={page + "footer"} className="footer-item">
         <Link to={`/${page}`}>{page.toUpperCase()}</Link>
       </li>
     )
@@ -31,7 +31,7 @@ function Footer() {
         {socialsList}
       </div>
       <ul className="footer_links">
-        <li>
+        <li className="footer-item">
           <Link to="/">HOME</Link>
         </li>
         {pagesList}
