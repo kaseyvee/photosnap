@@ -24,23 +24,29 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <Link to="/">
-        <Logo fill="white"/>
-      </Link>
-      <div className="footer_socials">
-        {socialsList}
+      <div className="wrapper">
+        <div className="footer_left">
+          <Link to="/" className="footer_left_logo">
+            <Logo fill="white"/>
+          </Link>
+          <div className="footer_left_socials">
+            {socialsList}
+          </div>
+          <ul className="footer_left_links">
+            <li className="footer-item">
+              <Link to="/">HOME</Link>
+            </li>
+            {pagesList}
+          </ul>
+        </div>
+        <div className="footer_right">
+          <Button
+            text="GET AN INVITE"
+            colour="white"
+          />
+          <p>Copyright 2019. All Rights Reserved</p>
+        </div>
       </div>
-      <ul className="footer_links">
-        <li className="footer-item">
-          <Link to="/">HOME</Link>
-        </li>
-        {pagesList}
-      </ul>
-      <Button
-        text="GET AN INVITE"
-        colour="white"
-      />
-      <p>Copyright 2019. All Rights Reserved</p>
     </footer>
   );
 }

@@ -1,29 +1,80 @@
 .footer {
+  @include flexCenter;
   background-color: $black;
   color: $white;
-  @include flexCenter;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 3.5rem;
-
-  &_socials {
-    display: flex;
-    gap: 0.75rem;
+  
+  .wrapper {
+    @include flexCenter;
+    flex-direction: column;
+    padding: 3.5rem;
   }
 
-  &_links {
+  &_left {
+    display: grid;
+    gap: 2rem;
+
+    &_socials {
+      display: flex;
+      gap: 0.75rem;
+    }
+  
+    &_links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      margin: 1rem 0 4.75rem 0;
+    }
+  }
+
+  &_right {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1.25rem;
-    margin: 1rem 0 5rem 0;
+
+    .button {
+      justify-content: center;
+    }
+    p {
+      opacity: 0.5;
+    }
   }
 
-  p {
-    opacity: 0.5;
-  }
-
-  @media (min-width: ) {
+  @media (min-width: 768px) {
     
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    &_left {
+      grid-auto-rows: min-content;
+      
+      &_socials {
+        grid-row: 3;
+      }
+      &_links {
+        flex-direction: row;
+      }
+    }
+    
+    &_right {
+      height: 100%;
+      display: grid;
+      grid-auto-rows: auto;
+      gap: 0;
+
+      .button {
+        justify-content: flex-end;
+        padding: 0;
+      }
+
+      p {
+        grid-row: 3;
+        text-align: right;
+        align-self: end;
+      }
+    }
+   
   }
 }
