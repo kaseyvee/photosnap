@@ -7,23 +7,23 @@ import { ReactComponent as YouTube } from "../../assets/socials/youtube.svg";
 const socialLinks = [
   {
     name: "Facebook",
-    logo: <Facebook fill="white" />
+    logo: <Facebook />
   },
   {
     name: "Instagram",
-    logo: <Instagram fill="white" />
+    logo: <Instagram />
   },
   {
     name: "Pinterest",
-    logo: <Pinterest fill="white" />
+    logo: <Pinterest />
   },
   {
     name: "Twitter",
-    logo: <Twitter fill="white" />
+    logo: <Twitter />
   },
   {
     name: "YouTube",
-    logo: <YouTube fill="white" />
+    logo: <YouTube />
   },
 ];
 

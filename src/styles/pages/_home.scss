@@ -7,6 +7,7 @@
 
   &_features {
     @include flexCenter;
+    background-color: $white;
     
     .wrapper {
       @include flexCenter;
