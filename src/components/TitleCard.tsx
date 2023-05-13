@@ -47,7 +47,7 @@ function TitleCard({ data, hero, imagePosition }: TitleCardProps) {
           </p>
           {data.buttonText && <Button
             text={data.buttonText}
-            colour={data.cardColour === "black" ? "black" : "white"}
+            colour={data.cardColour === "black" ? "white" : "black"}
           />}
         </div>
       </div>

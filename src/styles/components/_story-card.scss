@@ -1,0 +1,32 @@
+.story-card {
+  color: $white;
+  position: relative;
+  
+  picture {
+    display: flex;
+    background: linear-gradient(rgba($black, 0.01), rgba($black, 0.66));
+
+    img {
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &_main {
+    position: absolute;
+    bottom: 0;
+    $padding: 2.5rem;
+    padding: $padding;
+    width: calc(100% - $padding * 2);
+
+    header {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba($white, 0.25);
+    }
+
+    .button {
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+  }
+}

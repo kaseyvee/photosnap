@@ -23,13 +23,13 @@ h1, .header-large {
   }
 }
 
-h2 {
+.pricing-title {
   font-weight: bold;
   font-size: pixelToRem(24);
   line-height: pixelToRem(25);
 }
 
-h3 {
+.story-title, .feature-title {
   font-weight: bold;
   font-size: pixelToRem(18);
   line-height: pixelToRem(25);

@@ -1,7 +1,12 @@
+import StoryCard from "../components/StoryCard";
 import TitleCard from "../components/TitleCard";
 import homeData from "../helpers/data/homeData";
 
 function Home() {
+  const featuredStories = homeData.stories.map(story => {
+    return <StoryCard key={story.title} data={story} />
+  });
+
   return (
     <main className="home">
       <TitleCard
@@ -17,6 +22,9 @@ function Home() {
         data={homeData.actionCalls[2]}
         imagePosition="right"
       />
+      <div className="home_stories">
+        {featuredStories}
+      </div>
     </main>
   );
 }

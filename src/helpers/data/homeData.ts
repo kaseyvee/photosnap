@@ -31,7 +31,7 @@ const homeData = {
     {
       title: "Sunset Cityscapes",
       author: "Benjamin Cruz",
-      image: "sunset-cityscapes.jpg"
+      image: "cityscapes.jpg"
     },
     {
       title: "18 Days Voyage",

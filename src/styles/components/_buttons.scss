@@ -6,7 +6,7 @@
   white-space: nowrap;
   
   &_white {
-    color: $black;
+    color: $white;
     padding: 0;
 
     &_border {
@@ -17,7 +17,7 @@
   }
   
   &_black {
-    color: $white;
+    color: $black;
     padding: 0;
     
     &_border {

@@ -1,3 +1,19 @@
 .home {
   margin-top: pixelToRem(72);
+
+  &_stories {
+    display: grid;
+  }
+
+  @media (min-width: 500px) {
+    &_stories {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    &_stories {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
