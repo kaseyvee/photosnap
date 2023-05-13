@@ -9,6 +9,7 @@ interface TitleCardProps {
     title: string;
     description: string;
     buttonText?: string;
+    link?: string; 
   }
 }
 
@@ -46,6 +47,7 @@ function TitleCard({ data, hero, imagePosition }: TitleCardProps) {
             {data.description}
           </p>
           {data.buttonText && <Button
+            link={data.link ? data.link : ""}
             text={data.buttonText}
             colour={data.cardColour === "black" ? "white" : "black"}
           />}

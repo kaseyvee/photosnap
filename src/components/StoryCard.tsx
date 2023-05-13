@@ -1,5 +1,6 @@
-import Button from "./Button";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 interface StoryCardProps {
   data: {
@@ -37,12 +38,12 @@ function StoryCard({ data }: StoryCardProps) {
           story={true}
         />
       </div>
-      <a
-        href=""
+      <Link
+        to=""
         aria-labelledby="story-title"
         className="story-card_link"
       >
-      </a>
+      </Link>
     </motion.div>
   );
 }

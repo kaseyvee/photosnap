@@ -7,6 +7,7 @@ interface ButtonProps {
   text: string;
   colour: string;
   border?: boolean;
+  link?: string;
 }
 
 function Button(props: ButtonProps) {
@@ -18,7 +19,7 @@ function Button(props: ButtonProps) {
           {!props.border && <Arrow stroke={props.colour}/>}
         </span>
       :
-        <Link to="" className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
+        <Link to={`${props.link}`} className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
           {props.text}
           {!props.border && <Arrow stroke={props.colour}/>}
         </Link>

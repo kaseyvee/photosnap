@@ -13,6 +13,7 @@ const homeData = {
       image: "beautiful-stories.jpg",
       buttonText: "VIEW THE STORIES",
       cardColour: "white",
+      link: "stories"
     },
     {
       title: "DESIGNED FOR EVERYONE",
@@ -20,6 +21,7 @@ const homeData = {
       image: "designed-for-everyone.jpg",
       buttonText: "VIEW THE STORIES",
       cardColour: "white",
+      link: "stories"
     }
   ],
   stories: [
