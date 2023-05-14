@@ -21,14 +21,18 @@ function Home() {
         data={homeData.actionCalls[0]}
         hero={true}
         imagePosition="right"
+        page="home"
       />
       <TitleCard
         data={homeData.actionCalls[1]}
         imagePosition="left"
+        page="home"
+
       />
       <TitleCard
         data={homeData.actionCalls[2]}
         imagePosition="right"
+        page="home"
       />
       <div className="home_stories">
         {featuredStories}

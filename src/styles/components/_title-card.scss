@@ -17,18 +17,25 @@
     padding-inline: 2rem;
     
     &_content {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
       padding-block: 4.5rem;
       
-      p {
-        opacity: 0.6;
-      }
+      &_words {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
   
-      .button {
-        width: 100%;
-        text-align: left;
+        h1, h2 {
+          text-align: left;
+        }
+        
+        p {
+          opacity: 0.6;
+        }
+    
+        .button {
+          width: 100%;
+          text-align: left;
+        }
       }
     }
   }
@@ -40,12 +47,14 @@
     
     &_main {
       &_content {
-        h1, p, .button, .header-large {
-          max-width: 24rem;
-        }
-
-        .button {
-          margin-top: 1rem;
+        &_words {
+          h1, p, .button, .header-large {
+            max-width: 24rem;
+          }
+  
+          .button {
+            margin-top: 1rem;
+          }
         }
       }
     }

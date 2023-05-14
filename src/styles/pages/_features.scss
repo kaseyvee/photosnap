@@ -1,8 +1,4 @@
-.home {
-  &_stories {
-    display: grid;
-    background-color: $white;
-  }
+.features {
 
   &_features {
     @include flexCenter;
@@ -14,33 +10,26 @@
       padding-block: 3rem;
     }
   }
-
-  @media (min-width: 500px) {
-    &_stories {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
   
   @media (min-width: 768px) {
     &_features {
       .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
         padding-block: 5.5rem;
       }
     }
   }
   
   @media (min-width: 1100px) {
-    &_stories {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
     &_features {
       
       .wrapper {
-        padding-block: 7.5rem;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        padding-block: 10rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6.5rem 1.85rem;
+        align-items: start;
       }
     }
   }

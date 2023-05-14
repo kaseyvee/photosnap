@@ -59,7 +59,7 @@ const homeData = {
     },
     {
       title: "Available to Embed",
-      description: "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. ",
+      description: "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.",
       image: "embed.svg"
     }
   ]
