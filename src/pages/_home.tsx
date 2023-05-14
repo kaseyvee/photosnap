@@ -13,7 +13,7 @@ function Home() {
   })
 
   return (
-    <main className="home">
+    <main className="home page">
       <TitleCard
         data={homeData.actionCalls[0]}
         hero={true}

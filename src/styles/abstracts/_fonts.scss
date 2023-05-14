@@ -42,7 +42,7 @@ h4, .button {
   letter-spacing: pixelToRem(2);
 }
 
-.footer-item, .card_read, .comparisons {
+.footer-item, .last-month, .comparisons {
   font-weight: bold;
   font-size: pixelToRem(12);
   letter-spacing: pixelToRem(2);
@@ -59,6 +59,6 @@ h4, .button {
   }
 }
 
-.author_date {
+.author, .date {
   font-size: pixelToRem(13);
 }

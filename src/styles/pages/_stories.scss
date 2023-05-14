@@ -1,0 +1,18 @@
+.stories {
+  &_stories {
+    display: grid;
+    background-color: $white;
+  }
+
+  @media (min-width: 500px) {
+    &_stories {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    &_stories {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

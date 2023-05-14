@@ -7,13 +7,17 @@ interface StoryCardProps {
     title: string;
     author: string;
     image: string;
-  }
+    date?: string;
+  };
+  storiesPage: boolean;
 }
 
-function StoryCard({ data }: StoryCardProps) {
+function StoryCard({ data, storiesPage }: StoryCardProps) {
   return (
-    <motion.div
+    <motion.a
       className="story-card"
+      href=""
+      aria-labelledby={data.title}
       whileHover={{ y: -20 }}
       whileFocus={{ y: -20 }}
     >
@@ -29,8 +33,9 @@ function StoryCard({ data }: StoryCardProps) {
       </picture>
       <div className="story-card_main">
         <header>
-          <h2 className="story-title" id="story-title">{data.title}</h2>
-          <p>by {data.author}</p>
+          {data.date && <p className="date">{data.date}</p>}
+          <h2 className="story-title" id={data.title}>{data.title}</h2>
+          <p className="author">by {data.author}</p>
         </header>
         <Button
           colour="white"
@@ -38,13 +43,7 @@ function StoryCard({ data }: StoryCardProps) {
           story={true}
         />
       </div>
-      <Link
-        to=""
-        aria-labelledby="story-title"
-        className="story-card_link"
-      >
-      </Link>
-    </motion.div>
+    </motion.a>
   );
 }
 

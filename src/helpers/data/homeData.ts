@@ -27,12 +27,12 @@ const homeData = {
   stories: [
     {
       title: "The Mountains",
-      author: "John Appleseed",
+      author: "Ennis Del Mar",
       image: "mountains.jpg"
     },
     {
       title: "Sunset Cityscapes",
-      author: "Benjamin Cruz",
+      author: "Ellie W. & Joel M.",
       image: "cityscapes.jpg"
     },
     {
