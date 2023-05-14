@@ -11,6 +11,14 @@ function Pricing() {
         imagePosition="right"
         page="pricing"
       />
+      <div className="pricing_data">
+        <div className="pricing_data_options">
+
+        </div>
+        <div className="pricing_data_comparison">
+
+        </div>
+      </div>
       <InviteBanner />
     </main>
   );
