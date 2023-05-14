@@ -1,3 +1,3 @@
-const pageLinks = ["stories", "features", "pricings"];
+const pageLinks = ["stories", "features", "pricing"];
 
 export default pageLinks;
