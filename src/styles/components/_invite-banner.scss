@@ -1,0 +1,66 @@
+.invite-banner {
+  @include flexCenter;
+  color: $white;
+  position: relative;
+
+  $paddingX: 2rem;
+  padding-inline: $paddingX;
+  width: calc(100% - $paddingX * 2);
+  
+  picture {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  
+  .wrapper {
+    padding-block: 4rem;
+    display: grid;
+    gap: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 40%;
+      height: 6px;
+      background: $accent;
+      z-index: 0;
+    }
+  }
+
+  @media (min-width: 768px) {    
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header-large {
+        max-width: 400px;
+      }
+
+      &::before {
+        all: initial;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 6px;
+      background: $accent;
+      z-index: 1;
+    }
+  }
+}

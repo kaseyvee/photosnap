@@ -1,4 +1,5 @@
 import FeatureCard from "../components/FeatureCard";
+import InviteBanner from "../components/InviteBanner";
 import TitleCard from "../components/TitleCard";
 import featuresData from "../helpers/data/featuresData";
 import useScrollToTop from "../helpers/useScrollToTop";
@@ -28,6 +29,7 @@ function Features() {
           {featuresList}
         </div>
       </div>
+      <InviteBanner />
     </main>
   );
 }
