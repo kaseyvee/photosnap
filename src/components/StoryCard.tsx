@@ -9,10 +9,9 @@ interface StoryCardProps {
     image: string;
     date?: string;
   };
-  storiesPage: boolean;
 }
 
-function StoryCard({ data, storiesPage }: StoryCardProps) {
+function StoryCard({ data }: StoryCardProps) {
   return (
     <motion.a
       className="story-card"

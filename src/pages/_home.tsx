@@ -2,8 +2,11 @@ import FeatureCard from "../components/FeatureCard";
 import StoryCard from "../components/StoryCard";
 import TitleCard from "../components/TitleCard";
 import homeData from "../helpers/data/homeData";
+import useScrollToTop from "../helpers/useScrollToTop";
 
 function Home() {
+  useScrollToTop();
+  
   const featuredStories = homeData.stories.map(story => {
     return <StoryCard key={story.title} data={story} />
   });
