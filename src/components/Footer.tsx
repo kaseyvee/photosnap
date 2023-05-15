@@ -10,9 +10,11 @@ import socialLinks from "../helpers/links/socialLinks";
 function Footer() {
   const socialsList = socialLinks.map((social) => {
     return (
-      <Link key={social.name} to="" aria-label={`${social.name} link`}>
-        {social.logo}
-      </Link>
+      <li key={social.name}>
+        <Link to="" aria-label={`${social.name} link`}>
+          {social.logo}
+        </Link>
+      </li>
     );
   });
 
@@ -31,7 +33,7 @@ function Footer() {
           <Link to="/" className="footer_left_logo">
             <Logo fill="white" />
           </Link>
-          <div className="footer_left_socials">{socialsList}</div>
+          <ul className="footer_left_socials">{socialsList}</ul>
           <ul className="footer_left_links">
             <li className="footer-item">
               <Link to="/">HOME</Link>
