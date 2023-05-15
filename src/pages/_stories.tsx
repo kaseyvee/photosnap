@@ -1,5 +1,5 @@
-import FeaturedStory from "../components/FeaturedStory";
-import StoryCard from "../components/StoryCard";
+import FeaturedStory from "../components/stories/FeaturedStory";
+import StoryCard from "../components/stories/StoryCard";
 import storiesData from "../helpers/data/storiesData";
 import useScrollToTop from "../helpers/useScrollToTop";
 

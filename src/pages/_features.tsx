@@ -1,4 +1,4 @@
-import FeatureCard from "../components/FeatureCard";
+import FeatureCard from "../components/features/FeatureCard";
 import InviteBanner from "../components/InviteBanner";
 import TitleCard from "../components/TitleCard";
 import featuresData from "../helpers/data/featuresData";

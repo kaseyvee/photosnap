@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Button from "./Button";
+import Button from "../Button";
 
 interface StoryCardProps {
   data: {

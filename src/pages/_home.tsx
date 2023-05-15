@@ -1,5 +1,5 @@
-import FeatureCard from "../components/FeatureCard";
-import StoryCard from "../components/StoryCard";
+import FeatureCard from "../components/features/FeatureCard";
+import StoryCard from "../components/stories/StoryCard";
 import TitleCard from "../components/TitleCard";
 import homeData from "../helpers/data/homeData";
 import useScrollToTop from "../helpers/useScrollToTop";
