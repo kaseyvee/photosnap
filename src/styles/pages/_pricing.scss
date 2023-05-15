@@ -1,6 +1,10 @@
 .pricing {
   background-color: $white;
 
+  &_data {
+    padding-block: 4rem;
+  }
+  
   ul {
     display: flex;
     flex-direction: column;
@@ -9,12 +13,20 @@
   }
   
   @media (min-width: 768px) {
+    &_data {
+      padding-block: 7rem;
+    }
+    
     ul {
       padding: 2.5rem;
     }
   }
   
   @media (min-width: 1100px) {
+    &_data {
+      padding-block: 7.5rem;
+    }
+
     ul {
       flex-direction: row;
       justify-content: center;

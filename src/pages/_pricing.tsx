@@ -1,11 +1,17 @@
 import { useState } from "react";
 import InviteBanner from "../components/InviteBanner";
 import PricingCard from "../components/pricing/PricingCard";
+import PricingSwitch from "../components/pricing/PricingSwitch";
 import TitleCard from "../components/TitleCard";
 import pricingData from "../helpers/data/pricingData";
 
 function Pricing() {
   const [subscriptionLength, setSubscriptionLength] = useState("monthly");
+
+  function handleToggleSubscription(length: string | null) {
+    if (!length) return setSubscriptionLength(subscriptionLength === "monthly" ? "yearly" : "monthly");
+    return setSubscriptionLength(length);
+  }
 
   const pricingList = pricingData.pricing.map(pricing => {
     return (
@@ -29,9 +35,10 @@ function Pricing() {
       />
       <div className="pricing_data">
         <div className="pricing_data_options">
-          <div className="pricing_data_options_switch">
-
-          </div>
+          <PricingSwitch
+            subscriptionLength={subscriptionLength}
+            handleToggleSubscription={handleToggleSubscription}
+          />
           <ul>
             {pricingList}
           </ul>
