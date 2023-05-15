@@ -1,12 +1,16 @@
 import { useState } from "react";
-import InviteBanner from "../components/InviteBanner";
-import PricingCard from "../components/pricing/PricingCard";
-import PricingSwitch from "../components/pricing/PricingSwitch";
-import TitleCard from "../components/TitleCard";
+import { useMediaQuery } from "react-responsive";
+
 import pricingData from "../helpers/data/pricingData";
+
+import TitleCard from "../components/TitleCard";
+import PricingSwitch from "../components/pricing/PricingSwitch";
+import PricingCard from "../components/pricing/PricingCard";
+import InviteBanner from "../components/InviteBanner";
 
 function Pricing() {
   const [subscriptionLength, setSubscriptionLength] = useState("monthly");
+  const isMobile = useMediaQuery({ query: '(max-width: 767px' })
 
   function handleToggleSubscription(length: string | null) {
     if (!length) return setSubscriptionLength(subscriptionLength === "monthly" ? "yearly" : "monthly");
@@ -43,9 +47,9 @@ function Pricing() {
             {pricingList}
           </ul>
         </div>
-        <div className="pricing_data_comparison">
-
-        </div>
+        {/* <div className="pricing_data_comparison">
+          {!isMobile && <h2 className="header-large">COMPARE</h2>}
+        </div> */}
       </div>
       <InviteBanner />
     </main>
