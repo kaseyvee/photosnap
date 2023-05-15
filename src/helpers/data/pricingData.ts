@@ -22,6 +22,7 @@ const pricingData = {
       description: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
       monthlyPrice: 19,
       yearlyPrice: 190,
+      cardColour:"white",
       features: [...features.slice(0,1)]
     },
     pro: {
@@ -29,6 +30,7 @@ const pricingData = {
       description: "More advanced features available. Recommended for photography veterans and professionals.",
       monthlyPrice: 39,
       yearlyPrice: 390,
+      cardColour:"black",
       features: [...features.slice(0,3)]
     },
     business: {
@@ -36,6 +38,7 @@ const pricingData = {
       description: "Additional features available such as more detailed metrics. Recommended for business owners.",
       monthlyPrice: 99,
       yearlyPrice: 990,
+      cardColour:"white",
       features: [...features]
     },
   }

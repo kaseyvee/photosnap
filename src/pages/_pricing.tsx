@@ -1,4 +1,5 @@
 import InviteBanner from "../components/InviteBanner";
+import PricingCard from "../components/pricing/PricingCard";
 import TitleCard from "../components/TitleCard";
 import pricingData from "../helpers/data/pricingData";
 
@@ -13,7 +14,14 @@ function Pricing() {
       />
       <div className="pricing_data">
         <div className="pricing_data_options">
+          <div className="pricing_data_options_switch">
 
+          </div>
+          <ul>
+            <li>
+              <PricingCard />
+            </li>
+          </ul>
         </div>
         <div className="pricing_data_comparison">
 
