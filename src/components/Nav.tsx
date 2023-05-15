@@ -11,35 +11,35 @@ import pageLinks from "../helpers/links/pageLinks";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
-  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
   function handleToggleMenu() {
     setNavOpen(!navOpen);
-  };
+  }
 
   addEventListener("resize", () => {
     setNavOpen(false);
   });
 
-  const pagesList = pageLinks.map(page => {
+  const pagesList = pageLinks.map((page) => {
     return (
       <li key={page + "nav"} className="nav-item">
         <Link to={`/${page}`}>{page.toUpperCase()}</Link>
       </li>
-    )
-  })
+    );
+  });
 
-  const navItems = <>
-    <ul>
-      {pagesList}
-    </ul>
-    <Button
-      className="nav-button"
-      text="GET AN INVITE"
-      colour="black"
-      border={true}
-    />
-  </>;
+  const navItems = (
+    <>
+      <ul>{pagesList}</ul>
+      <Button
+        className="nav-button"
+        text="GET AN INVITE"
+        colour="black"
+        border={true}
+      />
+    </>
+  );
 
   return (
     <>
@@ -50,16 +50,18 @@ function Nav() {
             <Link to="/" className="logo">
               <img src={logo} alt="logo and go to home" />
             </Link>
-            {!isDesktop && <button
-              aria-expanded={navOpen ? "true" : "false"}
-              className="toggle-menu"
-              onClick={handleToggleMenu}
-            >
-              <img
-                src={navOpen ? close : menu}
-                alt={navOpen ? "close menu" : "open menu"}
-              />
-            </button>}
+            {!isDesktop && (
+              <button
+                aria-expanded={navOpen ? "true" : "false"}
+                className="toggle-menu"
+                onClick={handleToggleMenu}
+              >
+                <img
+                  src={navOpen ? close : menu}
+                  alt={navOpen ? "close menu" : "open menu"}
+                />
+              </button>
+            )}
           </div>
           {isDesktop && navItems}
           {navOpen && <div className="nav_list">{navItems}</div>}

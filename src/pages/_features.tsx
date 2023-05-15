@@ -7,14 +7,9 @@ import useScrollToTop from "../helpers/useScrollToTop";
 function Features() {
   useScrollToTop();
 
-  const featuresList = featuresData.features.map(feature => {
-    return (
-      <FeatureCard
-        key={feature.title + "feature"}
-        data={feature}
-      />
-    )
-  })
+  const featuresList = featuresData.features.map((feature) => {
+    return <FeatureCard key={feature.title + "feature"} data={feature} />;
+  });
 
   return (
     <main className="features page">
@@ -25,9 +20,7 @@ function Features() {
         page="features"
       />
       <div className="features_features">
-        <div className="wrapper">
-          {featuresList}
-        </div>
+        <div className="wrapper">{featuresList}</div>
       </div>
       <InviteBanner />
     </main>

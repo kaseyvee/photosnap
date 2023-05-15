@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FeatureRow(props) {
+function FeatureRow() {
   return (
     <div>
       

@@ -10,24 +10,31 @@ import InviteBanner from "../components/InviteBanner";
 
 function Pricing() {
   const [subscriptionLength, setSubscriptionLength] = useState("monthly");
-  const isMobile = useMediaQuery({ query: '(max-width: 767px' })
+  const isMobile = useMediaQuery({ query: "(max-width: 767px" });
 
   function handleToggleSubscription(length: string | null) {
-    if (!length) return setSubscriptionLength(subscriptionLength === "monthly" ? "yearly" : "monthly");
+    if (!length)
+      return setSubscriptionLength(
+        subscriptionLength === "monthly" ? "yearly" : "monthly"
+      );
     return setSubscriptionLength(length);
   }
 
-  const pricingList = pricingData.pricing.map(pricing => {
+  const pricingList = pricingData.pricing.map((pricing) => {
     return (
       <li>
         <PricingCard
           key={pricing.title}
           data={pricing}
-          price={subscriptionLength === "monthly" ? pricing.monthlyPrice : pricing.yearlyPrice}
+          price={
+            subscriptionLength === "monthly"
+              ? pricing.monthlyPrice
+              : pricing.yearlyPrice
+          }
         />
       </li>
-    )
-  })
+    );
+  });
 
   return (
     <main className="pricing page">
@@ -43,13 +50,11 @@ function Pricing() {
             subscriptionLength={subscriptionLength}
             handleToggleSubscription={handleToggleSubscription}
           />
-          <ul>
-            {pricingList}
-          </ul>
+          <ul>{pricingList}</ul>
         </div>
-        {/* <div className="pricing_data_comparison">
+        <div className="pricing_data_comparison">
           {!isMobile && <h2 className="header-large">COMPARE</h2>}
-        </div> */}
+        </div>
       </div>
       <InviteBanner />
     </main>

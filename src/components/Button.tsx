@@ -13,17 +13,26 @@ interface ButtonProps {
 function Button(props: ButtonProps) {
   return (
     <>
-      {props.story ?
-        <span className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
+      {props.story ? (
+        <span
+          className={`${props.className ? props.className : ""} button button_${
+            props.colour
+          }${props.border ? "_border" : ""}`}
+        >
           {props.text}
-          {!props.border && <Arrow stroke={props.colour}/>}
+          {!props.border && <Arrow stroke={props.colour} />}
         </span>
-      :
-        <Link to={`${props.link}`} className={`${props.className ? props.className : ""} button button_${props.colour}${props.border ? "_border" : ""}`}>
+      ) : (
+        <Link
+          to={`${props.link ? props.link : ""}`}
+          className={`${props.className ? props.className : ""} button button_${
+            props.colour
+          }${props.border ? "_border" : ""}`}
+        >
           {props.text}
-          {!props.border && <Arrow stroke={props.colour}/>}
+          {!props.border && <Arrow stroke={props.colour} />}
         </Link>
-      }
+      )}
     </>
   );
 }
