@@ -16,8 +16,8 @@ const pricingData = {
     image: "hero.jpg",
     cardColour: "black"
   },
-  pricing: {
-    basic: {
+  pricing: [
+    {
       title: "Basic",
       description: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
       monthlyPrice: 19,
@@ -25,7 +25,7 @@ const pricingData = {
       cardColour:"white",
       features: [...features.slice(0,1)]
     },
-    pro: {
+    {
       title: "Pro",
       description: "More advanced features available. Recommended for photography veterans and professionals.",
       monthlyPrice: 39,
@@ -33,15 +33,15 @@ const pricingData = {
       cardColour:"black",
       features: [...features.slice(0,3)]
     },
-    business: {
+    {
       title: "Business",
       description: "Additional features available such as more detailed metrics. Recommended for business owners.",
       monthlyPrice: 99,
       yearlyPrice: 990,
       cardColour:"white",
       features: [...features]
-    },
-  }
+    }
+  ]
 };
 
 export default pricingData;

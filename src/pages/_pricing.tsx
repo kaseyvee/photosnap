@@ -1,9 +1,24 @@
+import { useState } from "react";
 import InviteBanner from "../components/InviteBanner";
 import PricingCard from "../components/pricing/PricingCard";
 import TitleCard from "../components/TitleCard";
 import pricingData from "../helpers/data/pricingData";
 
 function Pricing() {
+  const [subscriptionLength, setSubscriptionLength] = useState("monthly");
+
+  const pricingList = pricingData.pricing.map(pricing => {
+    return (
+      <li>
+        <PricingCard
+          key={pricing.title}
+          data={pricing}
+          price={subscriptionLength === "monthly" ? pricing.monthlyPrice : pricing.yearlyPrice}
+        />
+      </li>
+    )
+  })
+
   return (
     <main className="pricing page">
       <TitleCard
@@ -18,9 +33,7 @@ function Pricing() {
 
           </div>
           <ul>
-            <li>
-              <PricingCard />
-            </li>
+            {pricingList}
           </ul>
         </div>
         <div className="pricing_data_comparison">
