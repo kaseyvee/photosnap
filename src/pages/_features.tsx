@@ -8,7 +8,11 @@ function Features() {
   useScrollToTop();
 
   const featuresList = featuresData.features.map((feature) => {
-    return <FeatureCard key={feature.title + "feature"} data={feature} />;
+    return (
+      <li key={feature.title + "feature"}>
+        <FeatureCard data={feature} />
+      </li>
+    )
   });
 
   return (
@@ -20,7 +24,7 @@ function Features() {
         page="features"
       />
       <div className="features_features">
-        <div className="wrapper">{featuresList}</div>
+        <ul className="wrapper">{featuresList}</ul>
       </div>
       <InviteBanner />
     </main>

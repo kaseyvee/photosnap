@@ -1,8 +1,7 @@
-import React from 'react';
 
 function FeatureRow() {
   return (
-    <div>
+    <div className='feature-row'>
       
     </div>
   );

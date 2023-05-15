@@ -22,9 +22,8 @@ function Pricing() {
 
   const pricingList = pricingData.pricing.map((pricing) => {
     return (
-      <li>
+      <li key={pricing.title + "pricing"}>
         <PricingCard
-          key={pricing.title}
           data={pricing}
           price={
             subscriptionLength === "monthly"

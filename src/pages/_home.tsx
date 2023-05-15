@@ -8,11 +8,19 @@ function Home() {
   useScrollToTop();
 
   const featuredStories = homeData.stories.map((story) => {
-    return <StoryCard key={story.title} data={story} />;
+    return (
+      <li key={story.title}>
+        <StoryCard data={story} />
+      </li>
+    )
   });
 
   const features = homeData.features.map((feature) => {
-    return <FeatureCard key={feature.title} data={feature} />;
+    return (
+      <li key={feature.title}>
+        <FeatureCard data={feature} />
+      </li>
+    )
   });
 
   return (
@@ -33,9 +41,9 @@ function Home() {
         imagePosition="right"
         page="home"
       />
-      <div className="home_stories">{featuredStories}</div>
+      <ul aria-label="stories" className="home_stories">{featuredStories}</ul>
       <div className="home_features">
-        <div className="wrapper">{features}</div>
+        <ul aria-label="features" className="wrapper">{features}</ul>
       </div>
     </main>
   );
