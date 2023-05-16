@@ -9,9 +9,7 @@ function Home() {
 
   const featuredStories = homeData.stories.map((story) => {
     return (
-      <li key={story.title}>
-        <StoryCard data={story} />
-      </li>
+      <StoryCard data={story} key={story.title} />
     )
   });
 
