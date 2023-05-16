@@ -6,6 +6,8 @@ function NotFound() {
     title: "UH OH! WE COULDN'T FIND THAT. :(",
     description: "Nothing to see here. Sorry!",
     cardColour: "black",
+    buttonText: "GO TO HOME",
+    link: "/"
   }
 
   return (
