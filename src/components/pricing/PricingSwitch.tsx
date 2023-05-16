@@ -18,7 +18,7 @@ function PricingSwitch({
       <button
         className="pricing-switch_button"
         onClick={() => handleToggleSubscription(null)}
-        aria-label={`click to show ${subscriptionLength} pricing`}
+        aria-label={`click to show ${subscriptionLength === "monthly" ? "yearly" : "monthly"} pricing`}
       >
         <span className="pricing-switch_button_toggle"></span>
       </button>

@@ -54,6 +54,14 @@ function Pricing() {
     return <FeatureRow key={feature} feature={feature} data={subscriptions} />;
   });
 
+  const subscriptionHeaders = pricingData.pricing.map((subscription) => {
+    return (
+      <th key={subscription.title + "header"}>
+        {subscription.title.toUpperCase()}
+      </th>
+    );
+  });
+
   return (
     <main className="pricing page">
       <TitleCard
@@ -71,11 +79,26 @@ function Pricing() {
           <ul>{pricingList}</ul>
         </div>
         <div className="pricing_data_comparison">
-          {!isMobile && <h2 className="header-large">COMPARE</h2>}
-          <h3 className="comparisons">THE FEATURES</h3>
+          {!isMobile ? (
+            <h2 className="header-large">COMPARE</h2>
+          ) : (
+            <h3 className="comparisons">THE FEATURES</h3>
+          )}
           <table>
-            <colgroup span={3}></colgroup>
-            <tbody>{featureList}</tbody>
+            {isMobile ? (
+              <>
+                <colgroup span={3}></colgroup>
+                <tbody>{featureList}</tbody>
+              </>
+            ) : (
+              <tbody>
+                <tr>
+                  <th>THE FEATURES</th>
+                  {subscriptionHeaders}
+                </tr>
+                {featureList}
+              </tbody>
+            )}
           </table>
         </div>
       </div>
