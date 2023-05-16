@@ -20,7 +20,7 @@ function FeatureRow({ data, feature, isMobile }: FeatureRowProps) {
   const subscriptionFeatures = Object.values(data).map(
     (subscriptionFeature, i) => {
       return (
-        <td key={feature + i}>
+        <td key={feature + i} className="checkmark">
           {subscriptionFeature && (
             <img src={checkmark} alt={`checkmark for ${feature}`} />
           )}
@@ -42,8 +42,8 @@ function FeatureRow({ data, feature, isMobile }: FeatureRowProps) {
           <tr className="subscription-features">{subscriptionFeatures}</tr>
         </>
       ) : (
-        <tr>
-          <td>{feature}</td>
+        <tr className="row">
+          <td className="compare-subscription">{feature}</td>
           {subscriptionFeatures}
         </tr>
       )}

@@ -6,7 +6,7 @@ interface TitleCardProps {
   imagePosition: "left" | "right";
   data: {
     cardColour: string;
-    image: string;
+    image?: string;
     title: string;
     description: string;
     buttonText?: string;
@@ -25,7 +25,7 @@ function TitleCard({ data, hero, imagePosition, page }: TitleCardProps) {
       className={`title-card ${hero ? "accent" : ""} ${imagePosition}`}
       style={colourScheme}
     >
-      <picture>
+      {data.image && <picture>
         <source
           media="(min-width: 1100px)"
           srcSet={`/photosnap/assets/${page}/desktop/${data.image}`}
@@ -35,7 +35,7 @@ function TitleCard({ data, hero, imagePosition, page }: TitleCardProps) {
           srcSet={`/photosnap/assets/${page}/tablet/${data.image}`}
         />
         <img src={`/photosnap/assets/${page}/mobile/${data.image}`} alt="" />
-      </picture>
+      </picture>}
       <div className="title-card_main">
         <div className="title-card_main_content">
           <div className="title-card_main_content_words">

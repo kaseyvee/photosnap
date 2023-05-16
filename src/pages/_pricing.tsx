@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-import pricingData from "../helpers/data/pricingData";
 import { features } from "../helpers/data/pricingData";
+import pricingData from "../helpers/data/pricingData";
 import useScrollToTop from "../helpers/useScrollToTop";
 
 import TitleCard from "../components/TitleCard";
@@ -12,7 +12,7 @@ import FeatureRow from "../components/pricing/FeatureRow";
 import InviteBanner from "../components/InviteBanner";
 
 function Pricing() {
-  // useScrollToTop();
+  useScrollToTop();
 
   const [subscriptionLength, setSubscriptionLength] = useState("monthly");
   const isMobile = useMediaQuery({ query: "(max-width: 767px" });
@@ -51,12 +51,12 @@ function Pricing() {
       }
     });
 
-    return <FeatureRow key={feature} feature={feature} data={subscriptions} />;
+    return <FeatureRow key={feature} feature={feature} data={subscriptions} isMobile={isMobile} />;
   });
 
   const subscriptionHeaders = pricingData.pricing.map((subscription) => {
     return (
-      <th key={subscription.title + "header"}>
+      <th key={subscription.title + "header"} className="compare-subscription types">
         {subscription.title.toUpperCase()}
       </th>
     );
@@ -92,8 +92,8 @@ function Pricing() {
               </>
             ) : (
               <tbody>
-                <tr>
-                  <th>THE FEATURES</th>
+                <tr className="pricing_data_comparison_header">
+                  <th className="compare-subscription">THE FEATURES</th>
                   {subscriptionHeaders}
                 </tr>
                 {featureList}

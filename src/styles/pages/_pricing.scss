@@ -9,6 +9,10 @@
     &_comparison {
       padding: $padding;
       width: calc(100% - $padding * 2);
+      
+      h2 {
+        padding-bottom: 4rem;
+      }
 
       h3 {
         padding-bottom: 1.5rem;
@@ -16,7 +20,7 @@
       }
 
       table {
-        width: 100%;
+        width: min(100%, 731px);
         border-collapse: collapse;
       }
     }
@@ -32,6 +36,32 @@
   @media (min-width: 768px) {
     &_data {
       padding-block: 7rem;
+
+      &_comparison {
+        @include flexCenter;
+        flex-direction: column;
+
+        th {
+          text-align: left;
+        }
+
+        &_header {
+          .compare-subscription:first-child {
+            padding-left: 1.5rem;
+          }
+
+          th {
+            padding-bottom: 1.5rem;
+          }
+          
+          border-bottom: 1px solid $black;
+        }
+
+        .types {
+          text-align: center;
+          width: 20%;
+        }
+      }
     }
     
     ul {
@@ -42,6 +72,10 @@
   @media (min-width: 1100px) {
     &_data {
       padding-block: 7.5rem;
+
+      &_comparison {
+        padding-top: 5rem;
+      }
     }
 
     ul {
