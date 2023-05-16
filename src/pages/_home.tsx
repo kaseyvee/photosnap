@@ -41,9 +41,9 @@ function Home() {
         imagePosition="right"
         page="home"
       />
-      <ul aria-label="stories" className="home_stories">{featuredStories}</ul>
+      <ul aria-label="Stories" className="home_stories">{featuredStories}</ul>
       <div className="home_features">
-        <ul aria-label="features" className="wrapper">{features}</ul>
+        <ul aria-label="Features" className="wrapper">{features}</ul>
       </div>
     </main>
   );

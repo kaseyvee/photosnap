@@ -44,6 +44,8 @@ Getting more comfortable with TypeScript was also one of the main goals and afte
 
 I still have some code to refactor, mostly with the pricing table. I've avoided using tables up until now, so this was probably one of the most challenging parts of this project, in both implementation and styling. I'm also still looking into ways for the table to be more legible for screen readers. If anyone has any insight or good resources for this, please let me know!
 
+Also having trouble implementing the 404 page on gh-pages. Seems to be working locally but not on gh-pages.
+
 ### Continued development
 
 Would like to add more animations for seamless transitions. Refactor pricing table for accessibility and cleaner code.

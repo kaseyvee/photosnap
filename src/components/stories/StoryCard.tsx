@@ -16,7 +16,7 @@ function StoryCard({ data }: StoryCardProps) {
     <motion.a
       className="story-card"
       href=""
-      aria-labelledby={data.title}
+      aria-labelledby={data.title.replace(" ", "-")}
       whileHover={{ y: -20 }}
       whileFocus={{ y: -20 }}
     >
