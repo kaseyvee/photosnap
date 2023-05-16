@@ -16,7 +16,7 @@ function StoryCard({ data }: StoryCardProps) {
     <motion.a
       className="story-card"
       href=""
-      aria-labelledby={data.title.replace(" ", "-")}
+      aria-labelledby={data.title.replaceAll(" ", "-")}
       whileHover={{ y: -20 }}
       whileFocus={{ y: -20 }}
     >
@@ -33,7 +33,7 @@ function StoryCard({ data }: StoryCardProps) {
       <div className="story-card_main">
         <header>
           {data.date && <p className="date">{data.date}</p>}
-          <h2 className="story-title" id={data.title}>{data.title}</h2>
+          <h2 className="story-title" id={data.title.replaceAll(" ", "-")}>{data.title}</h2>
           <p className="author">by {data.author}</p>
         </header>
         <Button
