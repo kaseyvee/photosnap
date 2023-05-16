@@ -9,7 +9,7 @@ function Home() {
 
   const featuredStories = homeData.stories.map((story) => {
     return (
-      <StoryCard data={story} key={story.title} />
+      <StoryCard key={story.title} data={story} />
     )
   });
 
@@ -39,9 +39,9 @@ function Home() {
         imagePosition="right"
         page="home"
       />
-      <ul aria-label="Stories" className="home_stories">{featuredStories}</ul>
+      <div aria-label="stories" className="home_stories">{featuredStories}</div>
       <div className="home_features">
-        <ul aria-label="Features" className="wrapper">{features}</ul>
+        <ul aria-label="features" className="wrapper">{features}</ul>
       </div>
     </main>
   );
