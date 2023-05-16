@@ -55,6 +55,17 @@ h4, .button {
   letter-spacing: pixelToRem(2);
 }
 
+.compare-subscription {
+  font-weight: bold;
+  font-size: pixelToRem(10);
+  letter-spacing: pixelToRem(1.67);
+
+  @media (min-width: 768px) {
+    font-size: pixelToRem(12);
+    letter-spacing: pixelToRem(2);
+  }
+}
+
 .nav-item, .nav-button {
   font-weight: bold;
   font-size: pixelToRem(15);

@@ -1,4 +1,4 @@
-const features = [
+export const features = [
   "UNLIMITED STORY POSTING",
   "UNLIMITED PHOTO UPLOAD",
   "EMBEDDING CUSTOM CONTENT",
