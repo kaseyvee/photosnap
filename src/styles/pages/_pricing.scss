@@ -1,15 +1,32 @@
 .pricing {
   background-color: $white;
 
+  $padding: 1.75rem;
+
   &_data {
     padding-block: 4rem;
+
+    &_comparison {
+      padding: $padding;
+      width: calc(100% - $padding * 2);
+
+      h3 {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $black;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+    }
   }
   
   ul {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    padding: 1.75rem;
+    padding: $padding;
   }
   
   @media (min-width: 768px) {

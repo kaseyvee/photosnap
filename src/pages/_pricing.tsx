@@ -3,13 +3,13 @@ import { useMediaQuery } from "react-responsive";
 
 import pricingData from "../helpers/data/pricingData";
 import { features } from "../helpers/data/pricingData";
+import useScrollToTop from "../helpers/useScrollToTop";
 
 import TitleCard from "../components/TitleCard";
 import PricingSwitch from "../components/pricing/PricingSwitch";
 import PricingCard from "../components/pricing/PricingCard";
-import InviteBanner from "../components/InviteBanner";
-import useScrollToTop from "../helpers/useScrollToTop";
 import FeatureRow from "../components/pricing/FeatureRow";
+import InviteBanner from "../components/InviteBanner";
 
 function Pricing() {
   // useScrollToTop();

@@ -1,0 +1,25 @@
+.pricing_data_comparison {
+  table {
+    .comparisons {
+      text-align: left;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    
+    .subscription-types {
+      th {
+        width: calc(1/3 * 100%);
+        opacity: 0.5;
+        text-align: left;
+        padding-bottom: 0.5rem;
+      }
+    }
+    
+    .subscription-features {      
+      border-bottom: 1px solid $grey;
+      td {
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+}

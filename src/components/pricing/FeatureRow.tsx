@@ -9,7 +9,14 @@ interface FeatureRowProps {
 
 function FeatureRow({ data, feature }: FeatureRowProps) {
   const subscriptionTypes = Object.keys(data).map((subscriptionType) => {
-    return <th key={subscriptionType + feature}>{subscriptionType}</th>;
+    return (
+      <th
+        key={subscriptionType + feature}
+        className="compare-subscription"
+      >
+        {subscriptionType.toUpperCase()}
+      </th>
+    )
   });
 
   const subscriptionFeatures = Object.values(data).map(
@@ -25,8 +32,8 @@ function FeatureRow({ data, feature }: FeatureRowProps) {
           {feature}
         </th>
       </tr>
-      <tr>{subscriptionTypes}</tr>
-      <tr>{subscriptionFeatures}</tr>
+      <tr className="subscription-types">{subscriptionTypes}</tr>
+      <tr className="subscription-features">{subscriptionFeatures}</tr>
     </>
   );
 }
