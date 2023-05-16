@@ -36,7 +36,7 @@ Users should be able to:
 
 ### What I learned
 
-I came across Frontend Mentor just over a month ago and have greatly improved my frontend and general coding skills. From modularization and file management, the ins and outs of CSS, accessibility, and refactoring.
+I came across Frontend Mentor just over 2 months ago and feel like I've greatly improved my frontend and general coding skills. From modularization and file management, the ins and outs of CSS, accessibility, and refactoring.
 
 All of the challenges I've done prior have helped me gain the skills to allow this project to go as smooth as possible- going from a "just wanna get this done ~~and refactor later~~" attitude to "how can I make this not a nightmare for future me" throughout the entire process.
 
