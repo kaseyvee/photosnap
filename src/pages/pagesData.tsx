@@ -26,7 +26,7 @@ const pagesData = [
     title: "pricing",
   },
   {
-    path: "/*",
+    path: "*",
     element: <NotFound />,
     title: "notFound",
   }
