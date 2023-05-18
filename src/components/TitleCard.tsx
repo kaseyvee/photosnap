@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 interface TitleCardProps {
   hero?: boolean;
@@ -38,7 +39,13 @@ function TitleCard({ data, hero, imagePosition, page }: TitleCardProps) {
       </picture>}
       <div className="title-card_main">
         <div className="title-card_main_content">
-          <div className="title-card_main_content_words">
+          <motion.div
+            className="title-card_main_content_words"
+            viewport={{ once: true }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1, x: [-100, 0]}}
+            transition={{ duration: 0.75, delay: 0.15 }}
+          >
             {hero ? (
               <h1>{data.title}</h1>
             ) : (
@@ -52,7 +59,7 @@ function TitleCard({ data, hero, imagePosition, page }: TitleCardProps) {
                 colour={data.cardColour === "black" ? "white" : "black"}
               />
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -60,7 +60,13 @@ function Nav() {
             exit={{ opacity: 0 }} className="overlay"
           ></motion.div>}
       </AnimatePresence>
-      <nav className="nav" ref={clickRef}>
+      <motion.nav
+        className="nav"
+        ref={clickRef}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="wrapper">
           <div className="nav_main">
             <Link to="/" className="logo">
@@ -93,7 +99,7 @@ function Nav() {
             </motion.div>
           }
         </AnimatePresence>
-      </nav>
+      </motion.nav>
     </>
   );
 }
