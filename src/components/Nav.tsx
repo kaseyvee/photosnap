@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 import logo from "../assets/logo.svg";
 import menu from "../assets/menu.svg";
@@ -8,7 +9,6 @@ import close from "../assets/close.svg";
 import Button from "./Button";
 
 import pageLinks from "../helpers/links/pageLinks";
-import { motion, AnimatePresence } from "framer-motion";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -73,16 +73,18 @@ function Nav() {
               <img src={logo} alt="logo and go to home" />
             </Link>
             {!isDesktop && (
-              <button
+              <motion.button
                 aria-expanded={navOpen ? "true" : "false"}
                 className="toggle-menu"
                 onClick={handleToggleMenu}
+                initial={{ scaleY: 1 }}
+                whileTap={{ scaleY: 0 }}
               >
                 <img
                   src={navOpen ? close : menu}
                   alt={navOpen ? "close menu" : "open menu"}
                 />
-              </button>
+              </motion.button>
             )}
           </div>
           {isDesktop && navItems}
