@@ -47,7 +47,7 @@ function TitleCard({ data, hero, imagePosition, page }: TitleCardProps) {
             className="title-card_main_content_words"
             initial={{ opacity: 0 }}
             viewport={{ once: true }}
-            whileInView={isMobile ? { opacity: 1, y: [-100, 0]} : { opacity: 1, x: [-100, 0]}}
+            whileInView={isMobile ? { opacity: 1, y: [-75, 0]} : { opacity: 1, x: imagePosition === "right" ? [-100, 0] : [100, 0]}}
             transition={{ duration: 0.75, delay: 0.15 }}
           >
             {hero ? (
