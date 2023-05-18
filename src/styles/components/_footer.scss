@@ -6,7 +6,7 @@
   .wrapper {
     @include flexCenter;
     flex-direction: column;
-    padding: 3.5rem;
+    padding: 3.5rem 1rem;
   }
 
   &_left {
@@ -75,6 +75,7 @@
     }
     p {
       opacity: 0.5;
+      text-align: center;
     }
   }
 

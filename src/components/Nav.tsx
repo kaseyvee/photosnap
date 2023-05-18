@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
@@ -8,15 +8,24 @@ import close from "../assets/close.svg";
 import Button from "./Button";
 
 import pageLinks from "../helpers/links/pageLinks";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const clickRef = useRef<any>(null);
 
   function handleToggleMenu() {
     setNavOpen(!navOpen);
   }
 
+  function handleOutsideMenuClick(e: any) {
+    if (!clickRef.current.contains(e.target)) {
+      setNavOpen(false);
+    }
+  }
+
+  addEventListener("click", handleOutsideMenuClick, true);
   addEventListener("resize", () => {
     setNavOpen(false);
   });
@@ -43,8 +52,15 @@ function Nav() {
 
   return (
     <>
-      {navOpen && <div className="overlay"></div>}
-      <nav className="nav">
+      <AnimatePresence>
+        {navOpen &&
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }} className="overlay"
+          ></motion.div>}
+      </AnimatePresence>
+      <nav className="nav" ref={clickRef}>
         <div className="wrapper">
           <div className="nav_main">
             <Link to="/" className="logo">
@@ -64,8 +80,19 @@ function Nav() {
             )}
           </div>
           {isDesktop && navItems}
-          {navOpen && <div className="nav_list">{navItems}</div>}
         </div>
+        <AnimatePresence>
+          {navOpen && 
+            <motion.div
+              className="nav_list"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, y: [-200, 0] }}
+              exit={{ opacity: 0, y: [0, -200] }}
+            >
+              {navItems}
+            </motion.div>
+          }
+        </AnimatePresence>
       </nav>
     </>
   );
